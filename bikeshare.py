@@ -7,7 +7,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 
 months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
-
+days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
 
 def get_filters():
     """
@@ -52,7 +52,7 @@ def get_filters():
         except:
             print("\nThat is not a valid selection!\n")
         else:
-            if day not in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']:
+            if day not in days:
                 print("\nThat is not a valid selection! Please try again.\n")
             else:
                 print("\nYou selected {}!\n".format(day.capitalize()))
@@ -96,7 +96,6 @@ def load_data(city, month, day):
 
     # Day Filter
     if day != 'all':
-        days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
         day = days.index(day)
         df = df[df['Day of Week'] == day]
 
@@ -115,9 +114,8 @@ def time_stats(df, month, day):
 
     # display the most common day of week
     if day == 'all':
-        days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
         day_mode = df['Day of Week'].mode()[0]
-        print("The most popular day of the week to travel was {}.".format(days[day_mode]))
+        print("The most popular day of the week to travel was {}.".format(days[day_mode].title()))
 
     # display the most common start hour
     df['Hour'] = df['Start Time'].dt.hour
