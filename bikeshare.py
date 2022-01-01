@@ -6,6 +6,8 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
+
 
 def get_filters():
     """
@@ -37,7 +39,7 @@ def get_filters():
         except:
             print("\nThat is not a valid selection! Please try again.\n")
         else:
-            if month not in ['january', 'february', 'march', 'april', 'may', 'june', 'all']:
+            if month not in months:
                 print("\nThat is not a valid selection! Please try again.\n")
             else:
                 print("\nYou selected {}!\n".format(month.capitalize()))
@@ -89,7 +91,6 @@ def load_data(city, month, day):
 
     # Month Filter
     if month != 'all':
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
         df = df[df['Month'] == month]
 
@@ -109,9 +110,8 @@ def time_stats(df, month, day):
 
     # display the most common month
     if month == 'all':
-        months = ['January', 'February', 'March', 'April', 'May', 'June']
         month_mode = df['Month'].mode()[0]
-        print("The month with the most number of trips was {}.".format(months[month_mode - 1]))
+        print("The month with the most number of trips was {}.".format(months[month_mode - 1].title()))
 
     # display the most common day of week
     if day == 'all':
