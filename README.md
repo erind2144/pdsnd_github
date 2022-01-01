@@ -10,7 +10,14 @@ US Bikeshare Data Interactive Display
 Bikeshare data from Chicago, New York City, and Washington was used to create an interactive display with filters and descriptive statistics.
 
 ### Files used
-Include the files used
+Python script is located in bikeshare.py
+
+Files referenced in bikeshare.py include the following:
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+This project was created for the Udacity Programming for Data Science with Python Nanodegree.
+
+I referenced content presented in this course for this project as well as the official Pandas Documentation.
