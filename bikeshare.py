@@ -206,7 +206,7 @@ def trip_duration_stats(df):
 
 
 def user_stats(df, city):
-    """Displays statistics on bikeshare users."""
+    """Displays statistics on bikeshare users types, genders, and birth years."""
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
@@ -241,7 +241,7 @@ def user_stats(df, city):
 
 
 def raw_data(df):
-    """Displays raw data."""
+    """Asks user if they would like to see the first 5 rows of raw data and then repeats asking if they would like to see 5 more rows until they say no."""
 
     while True:
         try:
