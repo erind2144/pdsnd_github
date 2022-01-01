@@ -4,10 +4,10 @@
 This project was created on 12/31/2021
 
 ### Project Title
-Replace the Project Title
+US Bikeshare Data Interactive Display
 
 ### Description
-Describe what your project is about and what it does
+Bikeshare data from Chicago, New York City, and Washington was used to create an interactive display with filters and descriptive statistics.
 
 ### Files used
 Include the files used
